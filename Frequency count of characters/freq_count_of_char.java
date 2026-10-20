@@ -4,19 +4,21 @@ import java.util.HashMap;
 public class freq_count_of_char {
     public static void main(String[] args) throws Exception {
 
-
-        HashMap<Character, Integer> map = new HashMap<>();
-
-        int value = 0;
-        char key;
-
+        HashMap <Character, Integer> map = new HashMap<>();
+        
         String alphabet = "aabbdfggdgkkagriganergiergnadfnvcadscn";
-
-        for (int i = 0; i < alphabet.length(); i += 2) {
-            map.getOrDefault(alphabet.charAt(i), value += 1);
-
+       
+        for (int i = 0; i < alphabet.length(); i++) {
+            char key = alphabet.charAt(i);
+           
+            if (map.containsKey(key)) {
+                int count = map.get(key);
+                count++;
+                map.put(key, count);
+            } else {
+                map.put(key, 1);
+            }
         }
-        System.out.println(key);
-      
+        System.out.println(map);
     }
 }
