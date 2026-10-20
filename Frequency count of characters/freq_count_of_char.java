@@ -2,10 +2,9 @@ import java.util.HashMap;
 
 public class freq_count_of_char {
     public static void main(String[] args) throws Exception {
-
         HashMap <Character, Integer> map = new HashMap<>();
-
-        String name = "adfkbmdfgdfggadfgadbfadb";
+        
+        String name = "asbcsdbafasbagdfg";
 
         for (int i = 0; i < name.length(); i++) {
             char key = name.charAt(i);
