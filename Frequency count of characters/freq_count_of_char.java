@@ -1,16 +1,15 @@
 import java.util.HashMap;
 
-
 public class freq_count_of_char {
     public static void main(String[] args) throws Exception {
 
         HashMap <Character, Integer> map = new HashMap<>();
-        
-        String alphabet = "aabbdfggdgkkagriganergiergnadfnvcadscn";
-       
-        for (int i = 0; i < alphabet.length(); i++) {
-            char key = alphabet.charAt(i);
-           
+
+        String name = "adfkbmdfgdfggadfgadbfadb";
+
+        for (int i = 0; i < name.length(); i++) {
+            char key = name.charAt(i);
+
             if (map.containsKey(key)) {
                 int count = map.get(key);
                 count++;
