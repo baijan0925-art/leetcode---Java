@@ -15,11 +15,8 @@ public class freq_count_of_char {
         for (int i = 0; i < alphabet.length(); i += 2) {
             map.getOrDefault(alphabet.charAt(i), value += 1);
 
-
-
         }
         System.out.println(key);
       
-
     }
 }
