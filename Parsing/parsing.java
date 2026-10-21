@@ -53,7 +53,12 @@ public class parsing {
             }
 
         }
-        System.out.print(wifi1 + " " + wifi2);
+
+        int download1 = Integer.parseInt(wifi2);
+        int download2 = Integer.parseInt(wifi2);
+
+
+        System.out.print(download1 + " " + download2);
             
     }
 }
