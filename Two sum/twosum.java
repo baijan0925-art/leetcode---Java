@@ -23,6 +23,7 @@ class twosum {
         int[] nums = {6, 4, 5, 3};
         int target = 7;
 
+        System.out.println(Arrays.toString(solution.twoSum(nums, target))); 
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
     }
 
