@@ -74,6 +74,5 @@ class mergeTwoL {
 
         solution.mergeTwoLists(list1, list2);
 
-
     }
 }
