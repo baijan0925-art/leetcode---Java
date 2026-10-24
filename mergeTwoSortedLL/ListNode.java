@@ -16,15 +16,15 @@ public class ListNode {
 class mergeTwoL {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         
-        ListNode list3 = new ListNode();
-        ListNode head = list3;
-
         if (list1 == null) {
             return list2;
         }
         if (list2 == null) {
             return list1;
         }
+
+        ListNode list3 = new ListNode();
+        ListNode head = list3;
 
         while(list1 != null && list2 != null) {
             if (list1.val < list2.val) {
@@ -34,19 +34,27 @@ class mergeTwoL {
             } else {
                 list3.val = list2.val;
                 list2 = list2.next;
-            }
+            } 
 
-            list3 = new ListNode();
-            list3 = list3.next;
-        
-            if (list1 == null) {
-                list3 = new ListNode();
-                list3 = list2.next;
-            } else if (list2 == null) {
-                list3 = new ListNode();
-                list3 = list1.next;
+            if (list1 != null && list2 != null) {
+                list3.next = new ListNode();
+                list3 = list3.next;
             }
         }
+        
+        if (list1 == null) {
+            list3.next = list2;
+        }
+        if (list2 == null) {
+            list3.next = list1;
+        }   
+        
+        list3 = head;
+        while (list3 != null) {
+            System.out.print(list3.val + ", ");
+            list3 = list3.next;
+        }
+
         return head;
     }
 
@@ -62,10 +70,10 @@ class mergeTwoL {
         list2.next.next = new ListNode(7);
         list2.next.next.next = null;
 
-        ListNode list3 = new ListNode();
-
         mergeTwoL solution = new mergeTwoL();
 
-        System.out.println(solution.mergeTwoLists(list1, list2));
+        solution.mergeTwoLists(list1, list2);
+
+
     }
 }
